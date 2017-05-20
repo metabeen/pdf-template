@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<style th:replace="inc/bootstrap :: inc"></style>
+<style>
+.clearfix {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+a {
+	color: #5D6975;
+	text-decoration: underline;
+}
+
+body {
+	position: relative;
+	width: 21cm;
+	height: 24cm;
+	margin: 0 auto;
+	color: #001028;
+	background: #FFFFFF;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-family: Arial;
+}
+
+header {
+	padding: 10px 0;
+	margin-bottom: 30px;
+}
+
+#logo {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#logo img {
+	width: 90px;
+}
+
+h1 {
+	border-top: 1px solid #5D6975;
+	border-bottom: 1px solid #5D6975;
+	color: #5D6975;
+	font-size: 2.4em;
+	line-height: 1.4em;
+	font-weight: normal;
+	text-align: center;
+	margin: 0 0 20px 0;
+	background: url(dimension.png);
+}
+
+#project {
+	float: left;
+}
+
+#project span {
+	color: #5D6975;
+	text-align: right;
+	width: 52px;
+	margin-right: 10px;
+	display: inline-block;
+	font-size: 0.8em;
+}
+
+#company {
+	float: right;
+	text-align: right;
+}
+
+#project div, #company div {
+	white-space: nowrap;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 20px;
+}
+
+table tr:nth-child(2n-1) td {
+	background: #F5F5F5 !important;
+}
+
+table th, table td {
+	text-align: center;
+}
+
+table th {
+	padding: 5px 20px;
+	color: #5D6975;
+	border-bottom: 1px solid #C1CED9;
+	white-space: nowrap;
+	font-weight: normal;
+	text-align: left;
+}
+
+table td {
+	padding: 20px;
+	text-align: center;
+}
+
+table td.unit, table td.qty {
+	font-size: 1.2em;
+	text-align: left;
+}
+
+table td.montant {
+	text-align: right;
+	font-size: 1.3em;
+}
+
+table td.total {
+	text-align: left;
+	font-size: 1.4em;
+}
+
+table td.grand_total {
+	text-align: left;
+	font-size: 1.4em;
+	border-bottom: 1px solid #5D6975;
+}
+
+#notices .notice {
+	color: #5D6975;
+	font-size: 1.2em;
+}
+
+footer {
+	color: #5D6975;
+	width: 100%;
+	height: 30px;
+	position: absolute; 
+	top: 1170px;
+	border-top: 1px solid #C1CED9;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div id="header">
+		<h1>Facture N°34</h1>
+		<header class="clearfix">
+			<!-- 			<div id="logo"> -->
+			<!-- 				<img src="logo.png"> -->
+			<!-- 			</div> -->
+
+			<div id="project">
+				<div>
+					<span>Client</span> Fen Wang
+				</div>
+				<div>
+					<span>Adresse</span> 17 porte d'italie, 75002 Paris
+				</div>
+				<div>
+					<span>E-mail</span> <a href="fenwang@gmail.com"> </a>
+				</div>
+				<div>
+					<span>Passée le</span> 22 mai 2017
+				</div>
+			</div>
+		</header>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>Libellé article</th>
+				<th>Prix unitaire</th>
+				<th>Quantité</th>
+				<th>Montant par article</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="unit">Vin bourgogne</td>
+				<td class="unit">100 €</td>
+				<td class="unit">10</td>
+				<td class="unit">1000,00 €</td>
+			</tr>
+			<tr>
+				<td class="unit">Vin bourgogne</td>
+				<td class="unit">100 €</td>
+				<td class="unit">10</td>
+				<td class="unit">1000,00 €</td>
+			</tr>
+			<tr>
+				<td class="unit">Vin bourgogne</td>
+				<td class="unit">100 €</td>
+				<td class="unit">10</td>
+				<td class="unit">1000,00 €</td>
+			</tr>
+			<tr>
+				<td class="unit">Vin bourgogne</td>
+				<td class="unit">100 €</td>
+				<td class="unit">10</td>
+				<td class="unit">1000,00 €</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="montant">Montant H.T</td>
+				<td class="total">4000 €</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="montant">Taxe 20%</td>
+				<td class="total">800 €</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="montant">Montant total</td>
+				<td class="grand_total">4 800 €</td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="notices">
+		<div>NOTICE:</div>
+		<div class="notice">Nos équipes préparent votre colis. Nous vous
+			avertirons par e-mail lors de l'envoie.</div>
+	</div>
+	<div id="footer">
+		<footer>Winemania, 1 Aux Caves 33540 Castelviel</footer>
+	</div>
+
+</body>
+</html>
